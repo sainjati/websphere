@@ -1,0 +1,37 @@
+Download the .zip file of IBM WebSphere Application Server Developer Tools for Eclipse to a directory on your computer. The .zip file is available at WebSphere Application Server Developer Tools Releases.
+https://developer.ibm.com/wasdev/docs/websphere-developer-tools-releases/
+
+Locate the entry that matches the Eclipse version that you are using and click on Get it now!. 
+If there is more than one download, then choose the one that includes the tools for WebSphere Application Server traditional.
+
+Start your Eclipse workbench. 
+Click Help > Install new software > Add. 
+In the Add Repository window, click Archive. 
+Browse to the location of the .zip file of IBM WebSphere Application Server Developer Tools for Eclipse. Select the file and then click Open.
+
+In the list of results, select IBM WebSphere Application Server Developer Tools for Eclipse V8.5.5 (and later). If you do not want to install all features (for example, you are installing only the WebSphere Application Server V8.5 Liberty Tools feature), then expand the IBM WebSphere Application Server Developer Tools for Eclipse V8.5.5 (and later node) and select the features that you want to install.
+
+You can install the following features:
+
+
+Feature
+Description
+OSGi Application Development Tools
+Provides tools for developing and maintaining OSGi-based applications and bundles.
+Web Development Tools
+Develop web applications by using the latest web technologies, such as HTML5, CSS3, Servlet 4.0, and JSP 2.3.
+Web Services Development Tools - Liberty
+Tools for developing and testing JAX-WS Web services and clients for Liberty.
+WebSphere Application Server Tools
+Tools for developing and administering WebSphere Application Server.
+WebSphere Application Server Liberty
+Tools for developing and administering WebSphere Application Server - Liberty.
+WebSphere Application Server traditional V9 Tools
+Tools for developing and administering WebSphere Application Server traditional V9.
+WebSphere Application Server traditional V8.5 Tools
+Tools for developing and administering WebSphere Application Server traditional V8.5.
+
+Click Next. 
+On the Review Licenses page, review the license text. If you agree to the terms, click I accept the terms of the license agreement and then click Finish. The installation process starts.
+
+
