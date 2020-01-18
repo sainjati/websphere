@@ -1,0 +1,62 @@
+Stop the workbench.
+Locate the eclipse.ini file in the <Eclipse installation directory>\eclipse directory, where <Eclipse installation directory> is the directory where you installed Eclipse.
+Make a copy of the eclipse.ini file, or back it up.
+Open the eclipse.ini file in a text editor.
+Locate the line -vmargs and add the following text immediately after it according to the following cases:
+
+If you are using an IBM 32-bit JRE, then add the following text after the -vmargs line:
+-Xms100m
+-Xmx1024m
+-Xscmx48m
+-Xshareclasses:name=IBMSDP_%u
+-Xquickstart
+-Xgcpolicy:gencon
+-Xmnx64m
+-Dcom.ibm.ws.management.event.max_polling_interval=1000
+
+If you are using an IBM 64-bit JRE, then add the following text after the -vmargs line:
+-Xms100m
+-Xmx1024m
+-Xscmx48m
+-Xshareclasses:name=IBMSDP_%u
+-Xcompressedrefs
+-Xquickstart
+-Xgcpolicy:gencon
+-Xmnx64m
+-Dcom.ibm.ws.management.event.max_polling_interval=1000
+
+If you are using an Oracle 32-bit JRE, then add the following text after the -vmargs line:
+-Xms100m
+-Xmx960m
+-XX:MaxPermSize=320m   
+-Dcom.ibm.ws.management.event.max_polling_interval=1000
+
+If you are using an Oracle 64-bit JRE, then add the following text after the -vmargs line:
+-Xms100m
+-Xmx1024m
+-XX:MaxPermSize=512m   
+-Xmx1024m
+-XX:+UseCompressedOops 
+-Dcom.ibm.ws.management.event.max_polling_interval=1000
+
+
+Locate the line --launcher.XXMaxPermSize and in the eclipse.ini file and modify the value: 
+If you are using an Oracle 32-bit JRE, then change the value to 320M as shown in the following text:
+--launcher.XXMaxPermSize 
+320M
+
+If you are using an Oracle 64-bit JRE, then change the value to 512M as shown in the following text:
+--launcher.XXMaxPermSize 
+512M
+
+If you installed any of the WebSphere Application Server Tools features, insert the following text immediately before the line with the text -vmargs:
+: 
+-vm
+<WebSphere Application Server V8.5 and later installation directory>\java\jre\bin\javaw.exe
+
+: 
+-vm
+<WebSphere Application Server V8.5 and later installation directory>/java/jre/bin/java
+
+Save and close the eclipse.ini file.
+Restart the workbench.
